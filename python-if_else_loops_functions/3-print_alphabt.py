@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print(*["%c" % a for a in range(ord('a'),ord('z')+1) if a not in (ord('q'),ord('e'))],sep='',end='')
+for alphabets in range(97, 123):
+    if not (alphabets == 101 or alphabet == 113):
+        print("{}".format(chr(alphabets)), end="")
