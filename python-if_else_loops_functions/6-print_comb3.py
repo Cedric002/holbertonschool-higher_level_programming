@@ -6,4 +6,3 @@ for numbers1 in range(10):
         else:
             print("{}{}".format(numbers1, numbers2))
 print()
-
