@@ -6,12 +6,12 @@ def main():
     if argc == 0:
         print("No arguments.")
     elif argc == 1:
-        print(f"One argument:")
+        print("One argument:")
     else:
-        print(f"{argc} arguments:")
+        print("{} arguments:".format(argc))
 
     for i, arg in enumerate(sys.argv[1:], start=1):
-        print(f"{i}: {arg}")
+        print("{}: {}".format(i, arg))
 
 if __name__ == "__main__":
     main()
