@@ -2,9 +2,10 @@
 import sys
 
 def main():
+    args = sys.argv[1:]
     addition = 0
-    for nb in range(1, len(sys.argv)):
-        addition += int(sys.argv[nb])
+    for nb in args:
+        addition += int(nb)
     print("{}".format(addition))
 
 if __name__ == "__main__":
