@@ -8,3 +8,4 @@ for nb in args:
 print("{}".format(addition))
 
 if __name__ == "__main__":
+    main()
