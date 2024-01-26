@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-from calculator_1 import add, subtract, multiply, divide
+from calculator_1 import addition, subtraction, multiply, divide
 
 a = 10
 b = 5
 
-print("Addition: {}".format(add(a, b)))
-print("Subtraction: {}".format(subtract(a, b)))
-print("Multiplication: {}".format(multiply(a, b)))
-print("Division: {}".format(divide(a, b)))
+print("{} + {}".format(addition(a, b)))
+print("{} - {}".format(subtraction(a, b)))
+print("{} * {}".format(multiply(a, b)))
+print("{} / {}".format(divide(a, b)))
 
 if __name__ == "__main__":
     main()
