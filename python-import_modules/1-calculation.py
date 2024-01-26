@@ -9,3 +9,6 @@ def main():
     print("{} - {} = {}".format(a, b, substract(a, b)))
     print("{} * {} = {}".format(a, b, multiply(a, b)))
     print("{} / {} = {}".format(a, b, divide(a, b)))
+
+if __name__ == "__main__":
+    main()
