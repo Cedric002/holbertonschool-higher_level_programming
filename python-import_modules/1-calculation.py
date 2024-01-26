@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from calculator_1 import addition, subtraction, multiply, divide
 
+def main():
 a = 10
 b = 5
 
