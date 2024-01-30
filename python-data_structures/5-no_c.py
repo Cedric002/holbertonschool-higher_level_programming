@@ -7,4 +7,3 @@ def no_c(my_string):
     new_string = ''.join(new_list)
 
     return new_string
-
