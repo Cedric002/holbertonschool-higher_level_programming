@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-def new_in_list(my_list, idx, element):
-    new_list = my_list[:]
+def no_c(my_string):
+    list_of_chars = list(my_string)
 
-    if idx >= 0 and idx < len(new_list):
-        new_list[idx] = element
+    new_list = [char for char in list_of_chars if char not in ['c', 'C']]
 
-    return new_list
+    new_string = ''.join(new_list)
+
+    return new_string
+
