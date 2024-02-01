@@ -4,7 +4,7 @@ def safe_print_list(my_list=[], x = 0):
 
     for item in my_list:
         try:
-            print(item, end=' ')
+            print(item, end='')
             count += 1
         except Exception:
             continue
