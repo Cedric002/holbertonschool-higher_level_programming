@@ -1,11 +1,9 @@
 # 0-add_integer.txt
 
+>>> add_integer = __import__('0-add_integer').add_integer
+
 ==============================
 How to use 0-add_integer.txt
 ==============================
 
-This function adds 2 integer and them addition def add_integer(a, b=98)
-
-Usage
-======
-
+This function adds 2 integer and them addition add_integer(a, b=98)
