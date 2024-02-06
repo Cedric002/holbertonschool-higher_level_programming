@@ -1,0 +1,11 @@
+# 0-add_integer.txt
+
+==============================
+How to use 0-add_integer.txt
+==============================
+
+This function adds 2 integer and them addition def add_integer(a, b=98)
+
+Usage
+======
+
