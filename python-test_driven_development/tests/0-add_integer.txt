@@ -20,10 +20,12 @@ if a and b are integers or floats.
 
 >>> add_integer(4, "School")
 Traceback (b must be an integer):
+...
 ValueError: b must be an integer
 
 >>> add_integer(None)
 Traceback (a must be an integer):
+...
 ValueError: a must be an integer
 
 >>> add_integer(-1, -1)
