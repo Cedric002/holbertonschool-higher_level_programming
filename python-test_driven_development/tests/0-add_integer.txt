@@ -20,17 +20,16 @@ exemples:
 98
 
 >>> add_integer(-1, -1)
-2
+-2
 
 >>> add_integer(-99.8, -2.4)
-101
+-101
 
 errors:
 >>> add_integer(4, "School")
 Traceback (b must be an integer):
 ...
 ValueError: b must be an integer
-
 >>> add_integer(None)
 Traceback (a must be an integer):
 ...
