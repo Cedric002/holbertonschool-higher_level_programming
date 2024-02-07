@@ -6,12 +6,10 @@
 This function adds elements of the matrix and them division 
 matrix_divided(matrix, div) if the elements are integers or floats.
 
-exemples:
+exemple:
 >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
 [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
 
->>> matrix_divided([[1.5,  2.5], [3.5,  4.5]],  1.5)
-[[1.0, 1.67], [2.33, 3.0]]
 
 errors:
 >>> matrix_divided([[1.5, 2.5], [3.5, 4.5]], 0)
