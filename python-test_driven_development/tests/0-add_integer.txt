@@ -2,8 +2,33 @@
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
-==============================
-How to use 0-add_integer.txt
-==============================
-
+"""
 This function adds 2 integer and them addition add_integer(a, b=98)
+if a and b are integers or floats.
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(100, -2)
+98
+
+>>> add_integer(2)
+100
+
+>>> add_integer(100.3, -2)
+98
+
+>>> add_integer(4, "School")
+Traceback (b must be an integer):
+ValueError: b must be an integer
+
+>>> add_integer(None)
+Traceback (a must be an integer):
+ValueError: a must be an integer
+
+>>> add_integer(-1, -1)
+2
+
+>>> add_integer(-99.8, -2.4)
+101
+"""
