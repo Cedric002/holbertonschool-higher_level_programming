@@ -27,11 +27,11 @@ exemples:
 
 errors:
 >>> add_integer(4, "School")
-Traceback (b must be an integer):
+Traceback (most recent call last):
 ...
-ValueError: b must be an integer
+TypeError: b must be an integer
 >>> add_integer(None)
-Traceback (a must be an integer):
+Traceback (most recent call last):
 ...
-ValueError: a must be an integer
+TypeError: a must be an integer
 """
