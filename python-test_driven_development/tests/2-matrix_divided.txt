@@ -7,29 +7,29 @@ This function adds elements of the matrix and them division
 matrix_divided(matrix, div) if the elements are integers or floats.
 
 exemples:
->>> matrix_divided([[1,  2,  3], [4,  5,  6]],  2)
-[[0.5,  1.0,  1.5], [2.0,  2.5,  3.0]]
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
 
 >>> matrix_divided([[1.5,  2.5], [3.5,  4.5]],  1.5)
-[[1.0,  1.67], [2.33,  3.0]]
+[[1.0, 1.67], [2.33, 3.0]]
 
 errors:
->>> matrix_divided([[1.5,  2.5], [3.5,  4.5]],  0)
+>>> matrix_divided([[1.5, 2.5], [3.5, 4.5]], 0)
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
 
->>> matrix_divided([[1,  2,  3], [4,  5]],  2)
+>>> matrix_divided([[1, 2, 3], [4, 5]], 2)
 Traceback (most recent call last):
 ...
 TypeError: Each row of the matrix must have the same size
 
->>> matrix_divided([[1,  2], [3,  4]], 'two')
+>>> matrix_divided([[1, 2], [3, 4]], 'two')
 Traceback (most recent call last):
 ...
 TypeError: div must be a number
 
->>> matrix_divided('not a matrix',  2)
+>>> matrix_divided('not a matrix', 2)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
