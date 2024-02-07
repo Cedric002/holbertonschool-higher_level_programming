@@ -1,0 +1,11 @@
+# 2-matrix_divided.txt
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+"""
+This function adds elements of the matrix and them division 
+matrix_divided(matrix, div) if the elements are integers or floats.
+
+
+
+"""
