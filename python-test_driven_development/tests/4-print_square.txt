@@ -8,10 +8,10 @@ size must be an integer.
 
 exemple:
 >>> print_square(5)
-####
-####
-####
-####
+#####
+#####
+#####
+#####
 
 errors:
 >>> print_square(-3)
