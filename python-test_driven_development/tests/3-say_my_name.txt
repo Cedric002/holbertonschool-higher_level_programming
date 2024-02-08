@@ -10,6 +10,8 @@ exemple:
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
+>>> say_my_name("Bob")
+My name is Bob
 
 errors:
 >>> say_my_name(12, "White")
@@ -22,9 +24,9 @@ Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
 
->>> say_my_name(68, 24)
+>>> say_my_name(2024)
 Traceback (most recent call last):
 ...
-TypeError: first_name and last_name must be a string
+TypeError: first_name must be a string
 
 """
