@@ -12,6 +12,7 @@ exemple:
 #####
 #####
 #####
+#####
 
 errors:
 >>> print_square(-3)
