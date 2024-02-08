@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def print_square(size):
-     """
+    """
     Print a square with the character #.
     size is the size length pf the square.
 
@@ -24,6 +24,6 @@ def print_square(size):
         raise TypeError('size must be an integer')
     elif size <  0:
         raise ValueError('size must be >=  0')
-    
+
     for nb in range(size):
         print('#' * size)
