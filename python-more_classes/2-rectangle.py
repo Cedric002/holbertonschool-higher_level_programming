@@ -33,8 +33,8 @@ class Rectangle:
     def width(self, value):
         if type(value) != int:
             raise TypeError('width must be an integer')
-        elif value <  0:
-            raise ValueError('width must be >=  0')
+        elif value < 0:
+            raise ValueError('width must be >= 0')
         else:
             self._width = value
 
@@ -46,8 +46,8 @@ class Rectangle:
     def height(self, value):
         if type(value) != int:
             raise TypeError('height must be an integer')
-        elif value <  0:
-            raise ValueError('height must be >=  0')
+        elif value < 0:
+            raise ValueError('height must be >= 0')
         else:
             self._height = value
 
@@ -55,6 +55,6 @@ class Rectangle:
         return self._width * self._height
 
     def perimeter(self):
-        if self._width ==  0 or self._height ==  0:
-            return  0
-        return  2 * (self._width + self._height)
+        if self._width ==0 or self._height == 0:
+            return 0
+        return 2 * (self._width + self._height)
