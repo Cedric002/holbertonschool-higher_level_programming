@@ -23,6 +23,8 @@ class Rectangle:
     perimeter: if width = 0 or height = 0, perimeter(self) = 0,
     print() and str() print the rectangle with the character #.
     If width = 0 or height = 0, return an empty string.
+    repr() return a string representation of the rectangle for to recreate
+    a new instance by eval().
     """
 
     def __init__(self, width=0, height=0):
@@ -71,4 +73,4 @@ class Rectangle:
             return "\n".join("#" * self.__width for nb in range(self.__height))
 
     def __repr__(self):
-        return "Rectangle({self.__width}, {self.__height})"
+        return f"Rectangle({self.__width}, {self.__height})"
