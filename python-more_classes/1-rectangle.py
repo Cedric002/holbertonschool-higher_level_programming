@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Define a square
+Define a Rectangle
 """
 
 
 class Rectangle:
     """
-    class Square with a private instance attribute width,
+    class Rectangle with a private instance attribute width,
     a property def width(self),
     a property setter def width(self, value),
     a private instance attribute height,
