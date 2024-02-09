@@ -25,7 +25,7 @@ class Rectangle:
     If width = 0 or height = 0, return an empty string.
     """
 
-     def __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
 
