@@ -1,23 +1,28 @@
 #!/usr/bin/python3
 """
-Define a square
+Define a rectangle
 """
 
 
 class Rectangle:
     """
-    class Square with a private instance attribute width,
+    class Rectangle with a private instance attribute width,
     a property def width(self),
     a property setter def width(self, value): width must be an integer,
     otherwise TypeError "width must be an integer".
     If width < 0, ValueError "width must be >= 0".
     a private instance attribute height,
     a property def height(self),
-    a property setter def height(self, value)
+    a property setter def height(self, value): height must be an integer,
+    otherwise TypeError "height must be an integer".
+    If height < 0, ValueError "height must be >= 0".
     and a instantiation with optional width and height:
-    a public instance method: def area(self): that returns the rectangle area
-    Public instance method: def perimeter(self): that returns the rectangle
-    perimeter: def __init__(self, width=0, height=0)
+    def __init__(self, width=0, height=0):
+    a public instance method: def area(self): returns the rectangle area,
+    a public instance method: def perimeter(self): returns the rectangle
+    perimeter: if width = 0 or height = 0, perimeter(self) = 0,
+    print() and str() print the rectangle with the character #.
+    If width = 0 or height = 0, return an empty string.
     """
 
     class Rectangle:
