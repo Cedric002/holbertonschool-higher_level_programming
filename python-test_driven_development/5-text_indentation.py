@@ -12,10 +12,13 @@ def text_indentation(text):
     """
 
     if not isinstance(text, str):
-        raise TypeError('text must be a string')
-
-    text = text.replace('.', '.').replace('?', '?').replace(':', ':')
-
-    text = text.strip()
-
-    print(text)
+        raise TypeError("text must be a string")
+    
+    formatted_text = text.replace('. ', '.  \n').replace('? ', '?  \n').replace(': ', ':  \n')
+    
+    lines = formatted_text.split('\n')
+    
+    stripped_lines = [line.strip() for line in lines]
+    
+    for line in stripped_lines:
+        print(line)
