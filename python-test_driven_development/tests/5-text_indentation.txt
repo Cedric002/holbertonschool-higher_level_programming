@@ -1,0 +1,29 @@
+5-text_indentation.txt
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+"""
+The function that prints a text with 2 new lines after each
+of these characters: ., ? and : .
+
+exemple:
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Quonam modo?
+
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo:")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Quonam modo:
+
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo.")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Quonam modo.
+
+errors:
+>>> text_indentation(101)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+
+"""
