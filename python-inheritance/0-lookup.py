@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 def lookup(obj):
-    return [attr for attr in dir(obj) if not attr.startswith('_')]
+    attributes_and_methods = dir(obj)
+    filtered_list = [attr for attr in attributes_and_methods if not attr.startswith('_')]
+    return filtered_list
