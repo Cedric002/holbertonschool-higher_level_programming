@@ -12,13 +12,13 @@ exemples:
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
->>> my_list = MyList([3, 1,  4,  1,  5])
+>>> my_list = MyList([3, 1, 4, 1, 5])
 >>> my_list.print_sorted()
-[3, 1,  1,  4,  5]
+[3, 1, 1, 4, 5]
 
->>> my_list = MyList([-3, -1,  4,  1,  5])
+>>> my_list = MyList([-3, -1, 4, 1, 5])
 >>> my_list.print_sorted()
-[-3, -1,  1,  4,  5]
+[-3, -1, 1, 4, 5]
 
 errors:
 >>> my_list = MyList([Pomme, 2, 3, Carotte, 5])
