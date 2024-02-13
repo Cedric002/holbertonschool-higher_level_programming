@@ -2,7 +2,7 @@
 """
 The function print class BaseGeometry with
 public instance method: def area(self): .
-Oterwise (message area() is not implemented).
+Oterwise message (Exception area() is not implemented).
 """
 
 
@@ -11,4 +11,4 @@ class BaseGeometry:
     The classe define a geometrie.
     """
     def area(self):
-        raise NotImplementedError('area() is not implemented')
+        raise Exception('area() is not implemented')
