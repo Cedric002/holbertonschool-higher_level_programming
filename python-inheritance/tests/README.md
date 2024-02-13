@@ -1,0 +1,1 @@
+# Doctest Python - Inheritance
