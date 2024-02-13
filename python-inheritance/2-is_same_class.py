@@ -5,9 +5,9 @@ otherwise False.
 """
 
 
-def is_same_class(obj, a_class)
+def is_same_class(obj, a_class):
     """
     Returns True or False
     """
 
-    pass
+    return type(obj) is a_class
