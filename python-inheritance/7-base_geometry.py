@@ -15,7 +15,7 @@ class BaseGeometry:
     The classe define a geometrie.
     """
     def area(self):
-        raise NotImplementedError("area() is not implemented")
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         if not isinstance(value, int):
