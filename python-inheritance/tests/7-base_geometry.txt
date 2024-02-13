@@ -1,0 +1,34 @@
+# 7-base_geometry.txt
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+"""
+The function print class BaseGeometry with a
+public instance method: def area(self): .
+A public instance method: def integer_validator(self, name, value).
+name should be a string,
+if value =! integer: TypeError (<name> must be an integer),
+if value <= 0: ValueError (<name> must be greater than 0).
+
+exemples:
+>>> area(self):()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: length must be an integer
+
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than  0
+
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+TypeError: distance must be an integer
+
+"""
