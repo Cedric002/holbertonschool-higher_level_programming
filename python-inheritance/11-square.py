@@ -11,20 +11,17 @@ print() should print, and str() return [Square] <width>/<height>
 
 Rectangle = __import__('9-rectangle').Rectangle
 
-class Rectangle:
-
 class Square(Rectangle):
     def __init__(self, size):
-        if not integer_validator(size):
-            raise ValueError("Size must be a positive integer")
-        self._size = size
+        self.__size = size
+        super().integer_validator("size", size)
         super().__init__(size, size)
 
     def area(self):
-        return self._size **  2
-
-    def __str__(self):
-        return "[Square] {}/{}".format(self._size, self._size)
+        return self.__size * self.__size
 
     def print(self):
-        print(self.__str__())
+        return f"[Square] {self.__size}/{self.__size}"
+
+    def str(self):
+        return self.print()
