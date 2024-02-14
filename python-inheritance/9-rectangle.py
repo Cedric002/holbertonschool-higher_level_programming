@@ -16,8 +16,13 @@ class Rectangle(BaseGeometry):
     Use from 7-base_geometry.py for the inherits of Rectangle
     """
     def __init__(self, width, height):
-        self.__width = integer_validator(width)
-        self.__height = integer_validator(height)
+        try:
+            self.__width = int(width)
+            self.__height = int(height)
+        except ValueError:
+            raise ValueError("Width and height must be integers.")
+        if self.__width <= 0 or self.__height <= 0:
+            raise ValueError("Width and height must be positive integers.")
 
     def area(self):
         return self.__width * self.__height
