@@ -13,13 +13,15 @@ class BaseGeometry:
     """
     pass
 
-def integer_validator(value):
-    if not isinstance(value, int) or value <= 0:
-        raise ValueError('Value must be a positive integer')
+def integer_validator(value, attribute_name):
+    if not isinstance(value, int):
+        raise TypeError(f"{attribute_name} must be an integer")
+    elif value <= 0:
+        raise ValueError("Value must be a positive integer")
 
 class Rectangle(BaseGeometry):
     def __init__(self, width, height):
-        integer_validator(width)
-        integer_validator(height)
+        integer_validator(width, 'width')
+        integer_validator(height, 'height')
         self.__width = width
         self.__height = height
