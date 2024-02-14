@@ -11,7 +11,7 @@ if value =! integer: TypeError (<name> must be an integer),
 if value <= 0: ValueError (<name> must be greater than 0).
 
 exemples:
->>> bg = BaseGeometry() = = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry() = __import__('7-base_geometry').BaseGeometry
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 
@@ -19,24 +19,24 @@ exemples:
 ...	bg.integer_validator("name", "John")
 ... except Exception as e:
 ...	print("[{}] {}".format(e.__class__.__name__, e))
-TypeError: length must be an integer
+[TypeError] length must be an integer
 
 >>> try:
 ...	bg.integer_validator("age", 0)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-ValueError: age must be greater than  0
+[ValueError] age must be greater than  0
 
 >>> try:
 ...	bg.integer_validator("distance", -4)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-TypeError: distance must be an integer
+[TypeError] distance must be an integer
 
 >>> try:
 ...	area(self):()
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-ValueError: area() is not implemented
+[ValueError] area() is not implemented
 
 """
