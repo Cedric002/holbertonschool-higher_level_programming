@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""
+"""i
 The function creates an Object from a “JSON file.
 """
 
