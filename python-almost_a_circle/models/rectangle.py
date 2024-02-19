@@ -10,6 +10,7 @@ assign each argument width, height, x and y to the right attribute.
 
 from .base import Base
 
+
 class Rectangle(Base):
     """
     Classe Rectangle that inherits from Base
