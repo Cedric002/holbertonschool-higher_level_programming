@@ -1,8 +1,14 @@
-# doctest base.py
+#!/usr/bin/python3
+"""
+unittest Base class
+"""
 
 import unittest
 
 class TestBase(unittest.TestCase):
+    """
+    test from Base class
+    """
 
     def test_base_constructor(self):
         base_instance = Base(1)
