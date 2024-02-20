@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
 Define a class Rectangle.
-Update : adding the public method def area(self): returns 
-the area value of the Rectangle instance.
+Update : adding the public method def area(self):
+returns the area value of the Rectangle instance.
 """
 
 
