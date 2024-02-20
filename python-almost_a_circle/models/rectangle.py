@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
 Define a class Rectangle.
-Update : adding the public method def area(self):
+Update: adding the public method def area(self):
 returns the area value of the Rectangle instance.
+Update: adding the public method def display(self): prints Rectangle instance
+with the character '#'.
 """
 
 
@@ -49,6 +51,13 @@ class Rectangle(Base):
         Public method that returns the area value of the Rectangle instance
         """
         return self.width * self.height
+
+    def display(self):
+        """
+        public method that prints the character #
+        """
+        for _ in range(self.height):
+            print("#" * self.width)
 
     @property
     def x(self):
