@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 """
 Define a class Rectangle.
-If width or height is not interger,
-raise TypeError : 'width or height must be an integer'.
-If width or height <= 0, raise ValueError : ' width or height > 0'.
-If x or y < 0, raise ValueError : 'x or y must be >= 0'.
 Update : adding the public method def area(self): returns 
 the area value of the Rectangle instance.
 """
