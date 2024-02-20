@@ -6,22 +6,19 @@ from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
     def test_init(self):
-        r = Rectangle(10,  2)
-        self.assertEqual(r.width,  10)
-        self.assertEqual(r.height,  2)
-        self.assertEqual(r.x,  0)
-        self.assertEqual(r.y,  0)
+        with self.assertRaises(TypeError):
+            Rectangle(10, "2")
 
     def test_setters(self):
-        r = Rectangle(10,  2)
-        r.width =  20
-        r.height =  4
-        r.x =  5
-        r.y =  6
-        self.assertEqual(r.width,  20)
-        self.assertEqual(r.height,  4)
-        self.assertEqual(r.x,  5)
-        self.assertEqual(r.y,  6)
+        r = Rectangle(10, 2)
+        with self.assertRaises(TypeError):
+            r.width = "20"
+        with self.assertRaises(ValueError):
+            r.width = -10
+        with self.assertRaises(TypeError):
+            r.x = {}
+        with self.assertRaises(ValueError):
+            r.x = -5
 
 if __name__ == '__main__':
     unittest.main()
