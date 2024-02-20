@@ -5,31 +5,23 @@ import unittest
 from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
-    def setUp(self):
-        self.rectangle = Rectangle(5, 10, 1, 2, 'rectangle')
+    def test_init(self):
+        r = Rectangle(10,  2)
+        self.assertEqual(r.width,  10)
+        self.assertEqual(r.height,  2)
+        self.assertEqual(r.x,  0)
+        self.assertEqual(r.y,  0)
 
-    def test_width(self):
-        self.assertEqual(self.rectangle.width, 5)
-        self.rectangle.width = 15
-        self.assertEqual(self.rectangle.width, 15)
-
-    def test_height(self):
-        self.assertEqual(self.rectangle.height, 10)
-        self.rectangle.height = 20
-        self.assertEqual(self.rectangle.height, 20)
-
-    def test_x(self):
-        self.assertEqual(self.rectangle.x, 1)
-        self.rectangle.x = 3
-        self.assertEqual(self.rectangle.x, 3)
-
-    def test_y(self):
-        self.assertEqual(self.rectangle.y, 2)
-        self.rectangle.y = 4
-        self.assertEqual(self.rectangle.y, 4)
-
-    def test_id(self):
-        self.assertEqual(self.rectangle.id, 'rectangle')
+    def test_setters(self):
+        r = Rectangle(10,  2)
+        r.width =  20
+        r.height =  4
+        r.x =  5
+        r.y =  6
+        self.assertEqual(r.width,  20)
+        self.assertEqual(r.height,  4)
+        self.assertEqual(r.x,  5)
+        self.assertEqual(r.y,  6)
 
 if __name__ == '__main__':
     unittest.main()
