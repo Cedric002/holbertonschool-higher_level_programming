@@ -5,6 +5,8 @@ Update: adding the public method def area(self):
 returns the area value of the Rectangle instance.
 Update: adding the public method def display(self): prints Rectangle instance
 with the character '#'.
+Update: overriding the __str__ method so that it
+returns [Rectangle] (<id>) <x>/<y> - <width>/<height>.
 """
 
 
@@ -58,6 +60,14 @@ class Rectangle(Base):
         """
         for _ in range(self.height):
             print("#" * self.width)
+
+    def __str__(self):
+        """
+        overriding the __str__ method for returns
+        [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
 
     @property
     def x(self):
