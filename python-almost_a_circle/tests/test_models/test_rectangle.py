@@ -36,23 +36,23 @@ class TestRectangle(unittest.TestCase):
         captured_output = StringIO()
         sys.stdout = captured_output
 
-        r = Rectangle(4, 6)
-        r.display()
+        r1 = Rectangle(2, 3, 2, 2)
+        r1.display()
 
         sys.stdout = sys.__stdout__
 
-        expected_output = "####\n" * 6
+        expected_output = "  ##\n##\n##\n\n"
         self.assertEqual(captured_output.getvalue(), expected_output)
 
         captured_output = StringIO()
         sys.stdout = captured_output
 
-        r = Rectangle(2, 2)
-        r.display()
+        r2 = Rectangle(3, 2, 1, 0)
+        r2.display()
 
         sys.stdout = sys.__stdout__
 
-        expected_output = "##\n" * 2
+        expected_output = " ###\n###\n\n"
         self.assertEqual(captured_output.getvalue(), expected_output)
 
     def test_str(self):

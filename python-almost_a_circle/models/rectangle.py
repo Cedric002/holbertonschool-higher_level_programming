@@ -7,6 +7,8 @@ Update: adding the public method def display(self): prints Rectangle instance
 with the character '#'.
 Update: overriding the __str__ method so that it
 returns [Rectangle] (<id>) <x>/<y> - <width>/<height>.
+Update: improving the public method def display(self): print Rectangle instance
+with the character '#' by taking care of x and y.
 """
 
 
@@ -56,14 +58,16 @@ class Rectangle(Base):
 
     def display(self):
         """
-        public method that prints the character #
+        Public that prints the character # by taking care of x and y
         """
+        print(' ' * self.x, end='')
         for _ in range(self.height):
             print("#" * self.width)
+        print()
 
     def __str__(self):
         """
-        overriding the __str__ method for returns
+        Overriding the __str__ method for returns
         [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
