@@ -60,10 +60,8 @@ class Rectangle(Base):
         """
         Public that prints the character # by taking care of x and y
         """
-        print(' ' * self.x, end='')
-        for _ in range(self.height):
-            print("#" * self.width)
-        print()
+        print("\n" * self.y, end="")
+        print((" " * self.x + "#" * self.width + "\n") * self.height, end="")
 
     def __str__(self):
         """
