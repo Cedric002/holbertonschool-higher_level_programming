@@ -9,6 +9,7 @@ Update: overriding the __str__ method so that it
 returns [Rectangle] (<id>) <x>/<y> - <width>/<height>.
 Update: improving the public method def display(self): print Rectangle instance
 with the character '#' by taking care of x and y.
+Update: adding the public method def update(self, *args)
 """
 
 
@@ -70,6 +71,29 @@ class Rectangle(Base):
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """
+        public method that assigns an argument to each attribute:
+        1st argument should be the id attribute
+        2nd argument should be the width attribute
+        3rd argument should be the height attribute
+        4th argument should be the x attribute
+        5th argument should be the y attribute
+        """
+        arguments = ['id', 'width', 'height', 'x', 'y']
+        for _, arg in enumerate(args):
+            if _ < len(arguments):
+                if arguments[_] == 'id':
+                    self.id = arg
+                elif arguments[_] == 'width':
+                    self.width = arg
+                elif arguments[_] == 'height':
+                    self.height = arg
+                elif arguments[_] == 'x':
+                    self.x = arg
+                elif arguments[_] == 'y':
+                    self.y = arg
 
     @property
     def x(self):

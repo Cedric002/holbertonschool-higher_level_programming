@@ -41,7 +41,7 @@ class TestRectangle(unittest.TestCase):
 
         sys.stdout = sys.__stdout__
 
-        expected_output = "  ##\n##\n##\n\n"
+        expected_output = "\n\n  ##\n  ##\n  ##\n"
         self.assertEqual(captured_output.getvalue(), expected_output)
 
         captured_output = StringIO()
@@ -52,7 +52,7 @@ class TestRectangle(unittest.TestCase):
 
         sys.stdout = sys.__stdout__
 
-        expected_output = " ###\n###\n\n"
+        expected_output = " ###\n ###\n"
         self.assertEqual(captured_output.getvalue(), expected_output)
 
     def test_str(self):
@@ -62,6 +62,15 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(5, 5, 1)
         expected_output = "[Rectangle] ({}) 1/0 - 5/5".format(r2.id)
         self.assertEqual(str(r2), expected_output)
+
+    def test_update(self):
+        r = Rectangle(10, 2)
+        r.update(12, 20, 10, 1, 0)
+        self.assertEqual(r.id, 12)
+        self.assertEqual(r.width, 20)
+        self.assertEqual(r.height, 10)
+        self.assertEqual(r.x, 1)
+        self.assertEqual(r.y, 0)
 
 if __name__ == '__main__':
     unittest.main()
