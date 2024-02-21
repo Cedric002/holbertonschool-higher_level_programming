@@ -10,6 +10,12 @@ returns [Rectangle] (<id>) <x>/<y> - <width>/<height>.
 Update: improving the public method def display(self): print Rectangle instance
 with the character '#' by taking care of x and y.
 Update: adding the public method def update(self, *args)
+Update: updating the public method def update(self, *args): changing
+prototype to update(self, *args, **kwargs) that
+assigns a key/value argument to attributes for:
+**kwargs can be thought of as a double pointer to a dictionary: key/value
+**kwargs must be skipped if *args exists and is not empty
+Each key represents an attribute to the instance
 """
 
 
@@ -72,28 +78,21 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
-        public method that assigns an argument to each attribute:
-        1st argument should be the id attribute
-        2nd argument should be the width attribute
-        3rd argument should be the height attribute
-        4th argument should be the x attribute
-        5th argument should be the y attribute
+        **kwargs: double pointer to a dictionary: key/value and
+        if *args exists and is not empty, **kwargs must be skipped
+        key in this dictionary represents an attribute to the instance
         """
-        arguments = ['id', 'width', 'height', 'x', 'y']
-        for _, arg in enumerate(args):
-            if _ < len(arguments):
-                if arguments[_] == 'id':
-                    self.id = arg
-                elif arguments[_] == 'width':
-                    self.width = arg
-                elif arguments[_] == 'height':
-                    self.height = arg
-                elif arguments[_] == 'x':
-                    self.x = arg
-                elif arguments[_] == 'y':
-                    self.y = arg
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        if args and len(args) != 0:
+            for _, arg in enumerate(args):
+                if _ < len(attributes):
+                    setattr(self, attributes[_], arg)
+        else:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
 
     @property
     def x(self):

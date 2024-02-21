@@ -63,14 +63,24 @@ class TestRectangle(unittest.TestCase):
         expected_output = "[Rectangle] ({}) 1/0 - 5/5".format(r2.id)
         self.assertEqual(str(r2), expected_output)
 
-    def test_update(self):
-        r = Rectangle(10, 2)
-        r.update(12, 20, 10, 1, 0)
-        self.assertEqual(r.id, 12)
-        self.assertEqual(r.width, 20)
-        self.assertEqual(r.height, 10)
-        self.assertEqual(r.x, 1)
-        self.assertEqual(r.y, 0)
+    def setUp(self):
+        self.r1 = Rectangle(10, 10, 10, 10)
+
+    def test_update_args(self):
+        self.r1.update(89, 2, 3, 4, 5)
+        self.assertEqual(self.r1.id, 89)
+        self.assertEqual(self.r1.width, 2)
+        self.assertEqual(self.r1.height, 3)
+        self.assertEqual(self.r1.x, 4)
+        self.assertEqual(self.r1.y, 5)
+
+    def test_update_kwargs(self):
+        self.r1.update(id=89, width=2, height=3, x=4, y=5)
+        self.assertEqual(self.r1.id, 89)
+        self.assertEqual(self.r1.width, 2)
+        self.assertEqual(self.r1.height, 3)
+        self.assertEqual(self.r1.x, 4)
+        self.assertEqual(self.r1.y, 5)
 
 if __name__ == '__main__':
     unittest.main()
