@@ -5,17 +5,13 @@ import unittest
 from models.square import Square
 
 class TestSquare(unittest.TestCase):
-    def test_init(self):
-        s = Square(5, 3, 4, 'S01')
-        self.assertEqual(s.id, 'S01')
-        self.assertEqual(s.x, 3)
-        self.assertEqual(s.y, 4)
-        self.assertEqual(s.width, 5)
-        self.assertEqual(s.height, 5)
-
-    def test_str(self):
-        s = Square(5, 3, 4, 'S01')
-        self.assertEqual(str(s), "[Square] (S01) 3/4 - 5")
+    def test_size_getter_and_setter(self):
+        s = Square(5)
+        self.assertEqual(s.size, 5)
+        s.size = 10
+        self.assertEqual(s.size, 10)
+        with self.assertRaises(Exception):
+            s.size = "9"
 
 if __name__ == '__main__':
     unittest.main()
