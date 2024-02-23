@@ -8,6 +8,8 @@ otherwise increment __nb_objects and assign the new value to the
 public instance attribute id.
 Update: adding the static method def to_json_string(list_dictionaries):
 that returns the JSON string representation of list_dictionaries.
+Update: adding the class method def save_to_file(cls, list_objs):
+that writes the JSON string representation of list_objs to a file.
 """
 
 import json
@@ -28,12 +30,29 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
-    def to_json_string(list_dictionaries):
         """
         Static method that returns the JSON string representation
         of list_dictionaries
         """
+    def to_json_string(list_dictionaries):
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    """
+    Class method that writes the JSON string representation
+    of list_objs to a file
+    """
+    def save_to_file(cls, list_objs):
+        class BaseEncoder(json.JSONEncoder):
+            def default(self, obj):
+                if isinstance(obj, Base):
+                    return obj.to_dictionary()
+                return super().default(obj)
+
+        filename = cls.__name__ + ".json"
+        with open(filename, "w") as f:
+            json_str = json.dumps(list_objs, cls=BaseEncoder)
+            f.write(json_str)
