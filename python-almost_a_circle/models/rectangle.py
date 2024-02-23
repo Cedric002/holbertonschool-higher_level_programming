@@ -16,6 +16,8 @@ assigns a key/value argument to attributes for:
 **kwargs can be thought of as a double pointer to a dictionary: key/value
 **kwargs must be skipped if *args exists and is not empty
 Each key represents an attribute to the instance
+Update: adding the public method def to_dictionary(self):
+returns the dictionary representation of a Rectangle.
 """
 
 
@@ -32,6 +34,18 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    def to_dictionary(self):
+        """
+        Public method that returns the dictionary representation of a Rectangle
+        """
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
 
     @property
     def width(self):

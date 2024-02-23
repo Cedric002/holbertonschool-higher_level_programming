@@ -11,6 +11,13 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(10, "2")
 
+    def test_to_dictionary(self):
+        r = Rectangle(1, 10, 2, 1, 9)
+        dictionary = r.to_dictionary()
+        self.assertEqual(dictionary,
+                {'id': 1, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
+        self.assertIsInstance(dictionary, dict)
+
     def test_setters(self):
         r = Rectangle(10, 2)
         with self.assertRaises(TypeError):
