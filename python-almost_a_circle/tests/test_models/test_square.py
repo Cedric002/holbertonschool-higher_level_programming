@@ -23,8 +23,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.id, 3)
 
     def test_to_dictionary(self):
-	    return ('id': self.id, 'size': self.__size,
-                'x': self.__x, 'y': self.__y)
+	    return {'id': self.id, 'size': self.__size,
+                'x': self.__x, 'y': self.__y}
 
 if __name__ == '__main__':
     unittest.main()
