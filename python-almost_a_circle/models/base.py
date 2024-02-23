@@ -30,10 +30,6 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
-    """
-    Static method that returns the JSON string representation
-    of list_dictionaries
-    """
     def to_json_string(list_dictionaries):
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
@@ -41,10 +37,6 @@ class Base:
             return json.dumps(list_dictionaries)
 
     @classmethod
-    """
-    Class method that writes the JSON string representation
-    of list_objs to a file
-    """
     def save_to_file(cls, list_objs):
         class BaseEncoder(json.JSONEncoder):
             def default(self, obj):
