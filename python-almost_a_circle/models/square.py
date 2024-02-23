@@ -3,6 +3,7 @@
 Define a class Square.
 Update: adding the public getter and setter size.
 Update: adding the public method def update(self, *args, **kwargs)
+Update: adding the public method def to_dictionary(self)
 """
 
 from .rectangle import Rectangle
@@ -20,7 +21,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-        The public method assigns attributes:
+        Public method assigns attributes:
         *args -> list of arguments (no-keyworded arguments) with
         1st argument -> id attribute
         2nd argument -> size attribute
@@ -42,6 +43,13 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        Public method returns the dictionary representation of a Square
+        """
+        return {key: value for key, value in self.__dict__.items()
+                if key in ['id', 'size', 'x', 'y']}
 
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".format(
