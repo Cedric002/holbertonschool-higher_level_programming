@@ -14,19 +14,21 @@ class Square(Rectangle):
     The setter assign width and height.
     The setter have the same value validation as
     the Rectangle for width and height.
-    The public method assigns attributes:
-    *args -> list of arguments (no-keyworded arguments) with
-    1st argument should be the id attribute
-    2nd argument should be the size attribute
-    3rd argument should be the x attribute
-    4th argument should be the y attribute
-    **kwargs -> double pointer to a dictionary: key/value (keyworded arguments)
-    **kwargs must be skipped if *args exists and not empty
     """
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(id, x, y, size, size)
 
     def update(self, *args, **kwargs):
+        """
+        The public method assigns attributes:
+        *args -> list of arguments (no-keyworded arguments) with
+        1st argument -> id attribute
+        2nd argument -> size attribute
+        3rd argument -> x attribute
+        4th argument -> y attribute
+        **kwargs -> double pointer to a dictionary
+        if *args exists and not empty, **kwargs must be skipped.
+        """
         if args:
             if len(args) >= 1:
                 self.id = args[0]
