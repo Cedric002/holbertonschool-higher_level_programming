@@ -8,7 +8,7 @@ SELECT
     EXTRA AS 'Extra',
     COLUMN_COMMENT AS 'Comment'
 FROM 
-    INFORMATION_SCHEMA.COLUMNS
+    mysql
 WHERE 
     TABLE_SCHEMA = 'hbtn_0c_0' AND 
     TABLE_NAME = 'first_table';
