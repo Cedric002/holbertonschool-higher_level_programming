@@ -1,2 +1,3 @@
 -- list all rows of the table
-SELECT * FROM mysql;
+SELECT *
+FROM mysql;
