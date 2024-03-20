@@ -4,4 +4,3 @@ CREATE TABLE IF NOT EXISTS states (
     name VARCHAR(256) NOT NULL,
     PRIMARY KEY(id)
 );
-END IF;
