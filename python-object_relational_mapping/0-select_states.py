@@ -22,7 +22,7 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     # Fetch and print the results
-    for row in rows:
+    for row in cursor:
         if row[1][0] is 'N':
             print(row)
 
