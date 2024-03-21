@@ -23,8 +23,7 @@ if __name__ == "__main__":
 
     # Fetch and print the results
     for row in cursor:
-        if row[1][0] is 'N':
-            print(row)
+        print(row)
 
     # Close the cursor and the database connection
     cursor.close()
