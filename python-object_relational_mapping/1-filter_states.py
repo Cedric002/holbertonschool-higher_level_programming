@@ -14,10 +14,11 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Execute the query
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC")
 
     # Fetch and print the results
-    for row in cur.fetchall():
+    rows = cur.fetchall()
+    for row in rows:
         print(row)
 
     # Close the cursor and connection
