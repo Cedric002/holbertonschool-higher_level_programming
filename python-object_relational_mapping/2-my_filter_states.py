@@ -23,7 +23,8 @@ if __name__ == "__main__":
 
     # Fetch and display the results
     for row in cursor.fetchall():
-        print(row)
+        if row[1] == sys.argv[4]:
+            print(row)
 
     # Close the database connection
     db.close()
