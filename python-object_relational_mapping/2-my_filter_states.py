@@ -14,7 +14,7 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
 
     # Connect to the MySQL server
-    db = MySQLdb.connect(host="localhost", port=3306, user=mysql_username, passwd=mysql_password, db=database_name)
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
 
     # Construct the SQL query using the provided state name
