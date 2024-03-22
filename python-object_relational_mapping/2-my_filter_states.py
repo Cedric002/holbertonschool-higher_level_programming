@@ -18,11 +18,12 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Construct the SQL query using the provided state name
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    cursor.execute(query, (state_name,))
-
+    cursor.execute("SELECT * FROM states WHERE name= %s ORDER BY id ASC",
+                (sys.argv[4],))
+    query = cursor.fetchall()
+    
     # Fetch and display the results
-    for row in cursor.fetchall():
+    for row in query:
         if row[1] == sys.argv[4]:
             print(row)
 
