@@ -1,5 +1,5 @@
-const headerElement = document.querySelector('h1');
+const headerElement = document.querySelector("header");
 
 if (headerElement) {
-  headerElement.style.color = '#FF0000';
+  headerElement.style.color = "#FF0000";
 }
