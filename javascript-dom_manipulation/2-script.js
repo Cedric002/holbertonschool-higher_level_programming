@@ -1,5 +1,5 @@
 const redHeaderButton = document.getElementById("red_header");
-const headerElement = document.querySelector("h1");
+const headerElement = document.querySelector("header");
 
 if (redHeaderButton && headerElement) {
   redHeaderButton.addEventListener("click", () => {
