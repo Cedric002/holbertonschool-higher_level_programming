@@ -1,8 +1,6 @@
-const redHeaderButton = document.getElementById("red_header");
-const headerElement = document.querySelector("div");
+const header = document.querySelector("header");
+const redHeader = document.querySelector("#red_header");
 
-if (redHeaderButton && headerElement) {
-  redHeaderButton.addEventListener("click", () => {
-    headerElement.classList.add("red");
-  });
-}
+redHeader.addEventListener("click", function () {
+  header.classList.add("red");
+});
